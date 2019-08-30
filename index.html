@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Project X</title>
+</head>
+<body>
+        <div class='chart'>
+            <h1 style='color: rgba(20, 20, 20, 0.6)'> Project X</h1>
+            <canvas id="myChart"></canvas>
+        </div>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Energy | gas','Environment | oil','Government | market','Aerospace & defense | war',' Retail | export','Finincial Services | Policy',' Support & Services | Market','Manufacturing | Production','Finincial Services | Capital','  Tourism and Hospitality | tourist', 'Energy | Climate','Financial services | Policy '],
+        
+        datasets: [{
+            label: 'x-axis: sector | topic  &  y-axis: intensity' ,
+            backgroundColor: ['red','green','yellow','slateblue','orange','red','lightblue','purple','black','goldenrod','lightgreen'],
+            data: [ 6, 6, 6,5,8,16,6,8,9,12,10,8]
+        }],
+       
+    },
+});
+</script>
+</body>
+</html>
